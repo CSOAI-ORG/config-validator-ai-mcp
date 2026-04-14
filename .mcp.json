@@ -1,23 +1,70 @@
 {
   "name": "config-validator-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Configuration file validation tools powered by MEOK AI Labs.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/config-validator-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "TOML, INI, and .env validation with automatic fix suggestions.",
+  "version": "1.0.0",
   "tools": [
-    "validate_toml",
-    "validate_ini",
-    "validate_dotenv",
-    "suggest_fixes"
-  ],
-  "categories": [
-    "Developer Tools",
-    "Validation"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "validate_toml",
+      "description": "Validate TOML configuration file syntax.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "content"
+        ]
+      }
+    },
+    {
+      "name": "validate_ini",
+      "description": "Validate INI configuration file syntax.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "content"
+        ]
+      }
+    },
+    {
+      "name": "validate_dotenv",
+      "description": "Validate .env file format and detect common issues.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "content"
+        ]
+      }
+    },
+    {
+      "name": "suggest_fixes",
+      "description": "Suggest fixes for common configuration file issues.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "config_type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "content"
+        ]
+      }
+    }
+  ]
 }

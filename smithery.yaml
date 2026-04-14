@@ -1,10 +1,31 @@
 name: config-validator-ai-mcp
-description: "MEOK AI Labs — Configuration file validation tools powered by MEOK AI Labs."
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/config-validator-ai-mcp
-license: MIT
-categories: [Developer Tools, Validation]
-tags: [configuration, config-validation, yaml-validation, json-schema, settings]
-runtime: python
-entrypoint: server.py
+description: TOML, INI, and .env validation with automatic fix suggestions.
+version: 1.0.0
+tools:
+- name: validate_toml
+  description: Validate TOML configuration file syntax.
+  parameters:
+  - name: content
+    type: string
+    required: true
+- name: validate_ini
+  description: Validate INI configuration file syntax.
+  parameters:
+  - name: content
+    type: string
+    required: true
+- name: validate_dotenv
+  description: Validate .env file format and detect common issues.
+  parameters:
+  - name: content
+    type: string
+    required: true
+- name: suggest_fixes
+  description: Suggest fixes for common configuration file issues.
+  parameters:
+  - name: content
+    type: string
+    required: true
+  - name: config_type
+    type: string
+    required: false

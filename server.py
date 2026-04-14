@@ -3,6 +3,11 @@ Config Validator AI MCP Server
 Configuration file validation tools powered by MEOK AI Labs.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import re
 import time
 from collections import defaultdict
@@ -24,12 +29,16 @@ def _check_rate_limit(tool_name: str) -> None:
 
 
 @mcp.tool()
-def validate_toml(content: str) -> dict:
+def validate_toml(content: str, api_key: str = "") -> dict:
     """Validate TOML configuration file syntax.
 
     Args:
         content: TOML file content string
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("validate_toml")
     try:
         import tomllib
@@ -63,12 +72,16 @@ def validate_toml(content: str) -> dict:
 
 
 @mcp.tool()
-def validate_ini(content: str) -> dict:
+def validate_ini(content: str, api_key: str = "") -> dict:
     """Validate INI configuration file syntax.
 
     Args:
         content: INI file content string
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("validate_ini")
     import configparser
     import io
@@ -85,12 +98,16 @@ def validate_ini(content: str) -> dict:
 
 
 @mcp.tool()
-def validate_dotenv(content: str) -> dict:
+def validate_dotenv(content: str, api_key: str = "") -> dict:
     """Validate .env file format and detect common issues.
 
     Args:
         content: .env file content string
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("validate_dotenv")
     issues = []
     variables = {}
@@ -123,13 +140,17 @@ def validate_dotenv(content: str) -> dict:
 
 
 @mcp.tool()
-def suggest_fixes(content: str, config_type: str = "auto") -> dict:
+def suggest_fixes(content: str, config_type: str = "auto", api_key: str = "") -> dict:
     """Suggest fixes for common configuration file issues.
 
     Args:
         content: Configuration file content
         config_type: File type - 'toml', 'ini', 'dotenv', 'auto' (auto-detect)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("suggest_fixes")
     if config_type == "auto":
         if content.strip().startswith('[') and '=' in content:
