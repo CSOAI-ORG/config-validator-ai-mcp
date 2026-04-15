@@ -1,0 +1,10 @@
+{
+  "name": "config-validator-ai-mcp",
+  "description": "MEOK AI Labs \u2014 config-validator-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/config-validator-ai-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}
