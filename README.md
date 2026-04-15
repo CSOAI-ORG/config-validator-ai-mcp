@@ -1,24 +1,50 @@
 # Config Validator AI MCP Server
 
-TOML, INI, and .env validation with automatic fix suggestions.
+> By [MEOK AI Labs](https://meok.ai) — Validate TOML, INI, and .env configuration files with fix suggestions
 
-## Tools
-
-- **validate_toml**
-- **validate_ini**
-- **validate_dotenv**
-- **suggest_fixes**
-
-## Quick Start
+## Installation
 
 ```bash
-pip install mcp
+pip install config-validator-ai-mcp
+```
+
+## Usage
+
+```bash
 python server.py
 ```
 
-## Rate Limits
+## Tools
 
-- Free tier: 50 calls/day per tool
-- Upgrade: https://meok.ai/pricing
+### `validate_toml`
+Validate TOML configuration file syntax and structure.
 
-Built by [MEOK AI Labs](https://meok.ai)
+**Parameters:**
+- `content` (str): TOML file content
+
+### `validate_ini`
+Validate INI configuration file syntax with section and key extraction.
+
+**Parameters:**
+- `content` (str): INI file content
+
+### `validate_dotenv`
+Validate .env file format and detect issues (invalid names, duplicates, exposed secrets).
+
+**Parameters:**
+- `content` (str): .env file content
+
+### `suggest_fixes`
+Suggest fixes for common configuration file issues with auto-fix support.
+
+**Parameters:**
+- `content` (str): Configuration file content
+- `config_type` (str): File type — 'toml', 'ini', 'dotenv', 'auto'
+
+## Authentication
+
+Free tier: 50 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+
+## License
+
+MIT — MEOK AI Labs
