@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 [project]
 name = "config-validator-ai-mcp"
 version = "1.0.0"
-description = "MEOK AI Labs — config-validator-ai-mcp"
+description = "Config Validator Ai automation via MCP. Includes validate toml, validate ini, validate dotenv. By MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]

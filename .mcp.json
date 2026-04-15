@@ -1,6 +1,6 @@
 {
   "name": "config-validator-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "Config Validator Ai automation via MCP. Includes validate toml, validate ini, validate dotenv. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
