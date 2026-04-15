@@ -1,5 +1,5 @@
 name: config-validator-ai-mcp
-description: TOML, INI, and .env validation with automatic fix suggestions.
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: validate_toml
