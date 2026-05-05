@@ -1,50 +1,38 @@
-# Config Validator AI MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Validate TOML, INI, and .env configuration files with fix suggestions
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/config-validator-ai-mcp)](https://github.com/CSOAI-ORG/config-validator-ai-mcp/stargazers)
+
+# uconfigU validatorU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/config-validator-ai-mcp)](https://www.npmjs.com/package/@meok-ai/config-validator-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/config-validator-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install config-validator-ai-mcp
+# or
+npm install -g @meok-ai/config-validator-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `validate_toml`
-Validate TOML configuration file syntax and structure.
-
-**Parameters:**
-- `content` (str): TOML file content
-
-### `validate_ini`
-Validate INI configuration file syntax with section and key extraction.
-
-**Parameters:**
-- `content` (str): INI file content
-
-### `validate_dotenv`
-Validate .env file format and detect issues (invalid names, duplicates, exposed secrets).
-
-**Parameters:**
-- `content` (str): .env file content
-
-### `suggest_fixes`
-Suggest fixes for common configuration file issues with auto-fix support.
-
-**Parameters:**
-- `content` (str): Configuration file content
-- `config_type` (str): File type — 'toml', 'ini', 'dotenv', 'auto'
-
-## Authentication
-
-Free tier: 50 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
