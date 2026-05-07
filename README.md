@@ -1,3 +1,7 @@
+[![config-validator-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/config-validator-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/config-validator-ai-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
+[![PyPI](https://img.shields.io/pypi/v/config-validator-ai-mcp)](https://pypi.org/project/config-validator-ai-mcp/)
+
 [![config-validator-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/config-validator-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/config-validator-ai-mcp)
 
 <div align="center">
