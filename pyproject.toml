@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "config-validator-ai-mcp"
-version = "1.0.3"
+version = "1.0.4"
 readme = "README.md"
 description = "Config Validator Ai automation via MCP. Includes validate toml, validate ini, validate dotenv. By MEOK AI Labs."
 license = {file = "LICENSE"}
