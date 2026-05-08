@@ -1,45 +1,59 @@
-[![config-validator-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/config-validator-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/config-validator-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/config-validator-ai-mcp)](https://pypi.org/project/config-validator-ai-mcp/)
-
-[![config-validator-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/config-validator-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/config-validator-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/config-validator-ai-mcp)](https://github.com/CSOAI-ORG/config-validator-ai-mcp/stargazers)
+# Config Validator Ai MCP
 
-# uconfigU validatorU aiU mcp
+**Config Validator AI MCP Server**
 
-****
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/config-validator-ai-mcp)](https://www.npmjs.com/package/@meok-ai/config-validator-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-config-validator-ai-mcp)](https://pypi.org/project/meok-config-validator-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/config-validator-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Config Validator AI MCP Server
+Configuration file validation tools powered by MEOK AI Labs.
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `validate_toml` | Validate TOML configuration file syntax. |
+| `validate_ini` | Validate INI configuration file syntax. |
+| `validate_dotenv` | Validate .env file format and detect common issues. |
+| `suggest_fixes` | Suggest fixes for common configuration file issues. |
 
 ## Installation
 
 ```bash
-pip install config-validator-ai-mcp
-# or
-npm install -g @meok-ai/config-validator-ai-mcp
+pip install meok-config-validator-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "config-validator-ai": {
+      "command": "python",
+      "args": ["-m", "meok_config_validator_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 4 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/config-validator-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
