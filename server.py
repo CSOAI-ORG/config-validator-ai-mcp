@@ -5,7 +5,6 @@ Configuration file validation tools powered by MEOK AI Labs.
 
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import re
@@ -24,7 +23,7 @@ def _check_rate_limit(tool_name: str) -> None:
     now = time.time()
     _call_counts[tool_name] = [t for t in _call_counts[tool_name] if now - t < WINDOW]
     if len(_call_counts[tool_name]) >= FREE_TIER_LIMIT:
-        raise ValueError(f"Rate limit exceeded for {tool_name}. Free tier: {FREE_TIER_LIMIT}/day. Upgrade at https://meok.ai/pricing")
+        raise ValueError(f"Rate limit exceeded for {tool_name}. Free tier: {FREE_TIER_LIMIT}/day. Upgrade at https://councilof.ai")
     _call_counts[tool_name].append(now)
 
 
@@ -66,7 +65,7 @@ def validate_toml(content: str, api_key: str = "") -> dict:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("validate_toml")
     try:
@@ -138,7 +137,7 @@ def validate_ini(content: str, api_key: str = "") -> dict:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("validate_ini")
     import configparser
@@ -193,7 +192,7 @@ def validate_dotenv(content: str, api_key: str = "") -> dict:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("validate_dotenv")
     issues = []
@@ -265,7 +264,7 @@ def suggest_fixes(content: str, config_type: str = "auto", api_key: str = "") ->
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     _check_rate_limit("suggest_fixes")
     if config_type == "auto":
@@ -302,5 +301,8 @@ def suggest_fixes(content: str, config_type: str = "auto", api_key: str = "") ->
             "fixed_content": fixed if fixes else None}
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

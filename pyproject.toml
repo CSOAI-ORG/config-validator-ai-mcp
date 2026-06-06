@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "config-validator-ai-mcp"
-version = "1.0.4"
+version = "1.0.6"
 readme = "README.md"
 description = "Config Validator Ai automation via MCP. Includes validate toml, validate ini, validate dotenv. By MEOK AI Labs."
 license = {file = "LICENSE"}
@@ -22,7 +22,7 @@ Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/config-validator-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py"]
+only-include = ["server.py", "auth_middleware.py"]
 
 [project.scripts]
 config_validator_ai_mcp = "server:main"

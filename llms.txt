@@ -1,0 +1,33 @@
+# config-validator-ai-mcp
+# **Config Validator AI MCP Server**
+
+## Install
+```bash
+pip install config-validator-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `validate_toml`
+Validate TOML configuration file syntax.
+
+### `validate_ini`
+Validate INI configuration file syntax.
+
+### `validate_dotenv`
+Validate .env file format and detect common issues.
+
+### `suggest_fixes`
+Suggest fixes for common configuration file issues.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

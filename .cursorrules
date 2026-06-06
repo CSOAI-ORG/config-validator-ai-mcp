@@ -1,0 +1,9 @@
+# config-validator-ai-mcp - Auto-trigger Rules
+
+When the user asks about config validator, use config-validator-ai-mcp tools: validate_toml, validate_ini, validate_dotenv, suggest_fixes
+
+**Config Validator AI MCP Server**
+
+Install: `pip install config-validator-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
