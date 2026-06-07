@@ -1,0 +1,59 @@
+{
+  "name": "config-validator-ai-mcp",
+  "description": "Config Validator Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/config-validator-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "validate_toml",
+      "name": "Validate Toml",
+      "description": "validate_toml via config-validator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "validate_ini",
+      "name": "Validate Ini",
+      "description": "validate_ini via config-validator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "validate_dotenv",
+      "name": "Validate Dotenv",
+      "description": "validate_dotenv via config-validator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "suggest_fixes",
+      "name": "Suggest Fixes",
+      "description": "suggest_fixes via config-validator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
