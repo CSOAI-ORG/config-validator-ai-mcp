@@ -1,4 +1,4 @@
-<!-- mcp-name: CSOAI-ORG/config-validator-ai-mcp -->
+<!-- mcp-name: io.github.CSOAI-ORG/config-validator-ai-mcp -->
 [![MCP Scorecard: 86/100](https://img.shields.io/badge/proofof.ai-86%2F100-5b21b6)](https://proofof.ai/scorecard/config-validator-ai-mcp.html)
 
 # Config Validator Ai MCP
@@ -138,3 +138,8 @@ Once configured, ask your assistant, for example:
 - "Use `validate_toml` to …"
 - "Use `validate_ini` to …"
 - "Use `validate_dotenv` to …"
+
+## See also
+
+MEOK compliance MCP fleet:
+[`validator-ai-mcp`](https://github.com/CSOAI-ORG/validator-ai-mcp)
